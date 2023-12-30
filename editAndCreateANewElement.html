@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body style="background-color: #212121; color: rgb(232, 235, 238);">
+   <ul class="language">
+    <li>javascript </li>
+    <li>Advance Java</li>
+   </ul>    
+</body> 
+
+<script>
+    function addLanguage(langName){
+      const li =  document.createElement('li');
+      li.innerHTML=`${langName}`
+      document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("Typescript")
+// best approach
+
+    function addOptiLanguage(langName){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('goLang')
+
+    //Edit
+  const secondLang =  document.querySelector("li:nth-child(2)")
+     secondLang.innerHTML="Mojo"
+    const newli= document.createElement('li')
+    newli.textContent="Mojo"
+    secondLang.replaceWith(newli)
+
+    //Edit
+
+    const firstLang=documnet.querySelector("li:first-child")
+    firstLang.OuterHTML='<li>Typescript</li>'
+
+    //const remove
+    const lastLang=document.querySelector('li:last-child')
+    lastLang.remove();
+ </script>
+</html>
